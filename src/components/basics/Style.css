@@ -1,0 +1,182 @@
+/* ---------- Container that holds all cards ---------- */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  padding: 50px;
+  justify-items: center;
+  background-color: #f8f8f8;
+}
+
+
+/* ---------- Single card ---------- */
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 30%;               /* 3 cards per row */
+  min-width: 280px;         /* So it doesn’t shrink too much */
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Image ---------- */
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ---------- Card content ---------- */
+.card-body {
+  padding: 15px;
+}
+
+.card-no {
+  background-color: #ff4b2b;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.card-title {
+  display: block;
+  margin-top: 5px;
+  color: #ff4b2b;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 20px;
+  color: #222;
+  margin-top: 10px;
+}
+
+.para {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* ---------- Buttons ---------- */
+.read {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #ff4b2b;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read:hover {
+  background-color: #e6391f;
+}
+
+.order {
+  display: inline-block;
+  margin: 15px 0 20px;
+  background-color: #ff4b2b;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.order:hover {
+  background-color: #e6391f;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 1024px) {
+  .card_container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .card_container {
+    grid-template-columns: repeat(1, 1fr); /* 1 per row on phone */
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+/* Navbar container */
+.navbar {
+  width: 100%;
+  height: 10px;
+  border-radius: 40px;
+  background-color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  
+  position: fixed;
+  top: 0;
+  left: 10;
+  right: 10;
+  z-index: 1000; 
+}
+
+
+/* Button group layout */
+.btn-group {
+  display: flex;
+  gap: 20px;
+}
+
+/* Individual buttons */
+.btn-item {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn-item:hover {
+  background-color: #ffba00;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Active/Selected button look (optional for later JS use) */
+.btn-item.active {
+  background-color: #ff9f00;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(255, 159, 0, 0.4);
+}
+
+
