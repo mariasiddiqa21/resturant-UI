@@ -1,7 +1,7 @@
 
 import React ,{useState} from 'react'
 import Menu from './Menuapi';
-import style from './Style.css'
+
 import Menucard from './Menucard';
 
 
